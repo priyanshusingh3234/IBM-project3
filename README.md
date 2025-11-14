@@ -1,96 +1,79 @@
 # 🏦 Loan Default Risk Prediction  
 ### IBM Machine Learning Project
 
-This project is designed to predict whether a loan applicant is likely to **default** or **repay** a loan.  
-Using basic financial and personal information, a Machine Learning model analyzes the risk level and helps make smarter lending decisions.
+This project focuses on predicting whether a loan applicant is likely to **default** or **repay** a loan using a Machine Learning model. The goal is to help financial institutions make safer and more accurate lending decisions by analyzing key applicant information.
 
 ---
 
-## 🎯 Project Objective
+## 📘 Introduction
 
-The main goal of this project is to build a simple and effective ML model that:
+Loan default prediction is an essential task in the finance industry. Banks and lending companies need to understand which applicants are safe to lend money to and which may cause future financial risk.  
+Machine Learning models help automate this process by learning patterns from past data and predicting the probability of default for new applicants.
 
-- Takes applicant financial details as input  
-- Learns patterns of default vs non-default  
-- Predicts whether a new applicant is **risky** or **safe**  
-
-This kind of system is commonly used by banks, NBFCs, and financial institutions before approving loans.
+This project demonstrates a simple, easy-to-understand ML pipeline built using Python and Scikit-learn.
 
 ---
 
-## 📌 Why Loan Default Prediction?
+## 🎯 Objective of the Project
 
-Lending organizations face two major challenges:
-
-1. Giving loans to high-risk customers → **Financial loss**  
-2. Rejecting genuine customers → **Business loss**
-
-A machine learning–based loan risk model helps solve both by:
-
-- Reducing bad loans (defaults)  
-- Improving approval accuracy  
-- Making data-driven decisions  
+- Build a logistic regression model for predicting loan default risk  
+- Train the model using financial and personal details of applicants  
+- Evaluate the model using accuracy and confusion matrix  
+- Predict the outcome for a new applicant  
+- Demonstrate how ML can support real-world loan decision systems  
 
 ---
 
 ## 📁 Dataset Description
 
-The dataset consists of the following features:
+The dataset is created manually using NumPy and contains five input features:
 
 | Feature | Description |
 |--------|-------------|
-| **income** | Applicant's yearly income |
-| **loan_amount** | Loan amount requested |
-| **credit_score** | Credit history score |
-| **age** | Applicant’s age |
+| **income** | Annual income of the applicant |
+| **loan_amount** | Total loan amount requested |
+| **credit_score** | Applicant’s credit score |
+| **age** | Age of the applicant |
 | **years_of_employment** | Total years of employment |
 | **target** | 0 = No Default, 1 = Default |
 
-The dataset is manually created using NumPy for demonstration purposes.
+This dataset helps the model identify patterns between applicant attributes and their repayment behavior.
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Machine Learning Model Used
 
-**Algorithm Used:** Logistic Regression  
+### **Logistic Regression**
 
-Reasons for choosing it:
+This algorithm is used because:
 
-- Ideal for binary classification (Default / No Default)  
-- Simple and fast  
-- Works well on small datasets  
-- Easy to interpret  
+- It is ideal for binary classification (Default / No Default)  
+- It works well on small datasets  
+- Training is fast and results are easy to interpret  
+- It is widely used in financial risk prediction  
 
-### ML Workflow:
+### Workflow:
 
 1. Create dataset  
-2. Split into train & test sets  
-3. Scale the features using StandardScaler  
+2. Train-test split  
+3. Standardize features  
 4. Train Logistic Regression model  
-5. Evaluate using accuracy and confusion matrix  
-6. Predict risk for a new applicant  
+5. Predict results  
+6. Evaluate model  
+7. Predict risk for a new applicant  
 
 ---
 
-## 🔧 Technologies Used
+## 🛠️ Technologies Used
 
 - Python  
 - NumPy  
 - Scikit-learn  
-  - `train_test_split`  
-  - `StandardScaler`  
-  - `LogisticRegression`  
-  - `accuracy_score`  
-  - `confusion_matrix`  
+  - LogisticRegression  
+  - StandardScaler  
+  - train_test_split  
+  - accuracy_score  
+  - confusion_matrix  
 
 ---
-
-## ▶️ How to Run the Project
-
-### Step 1: Install Dependencies
-```bash
-pip install numpy scikit-learn
-
-
-###step2 python loan_default_prediction.py
 
